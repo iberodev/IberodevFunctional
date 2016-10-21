@@ -18,20 +18,18 @@ namespace IberodevFuncionalProgramming
         {
             SmartClass smartClass = new SmartClass();
             smartClass.MethodAddress += WriteInConsole;
-            //you could assign the same method again and it will execute the method twice
-            //smartClass.MethodAddress += WriteInConsole;
-            smartClass.MethodAddress += SendByEmail;
+            smartClass.MethodAddress += delegate (string message)
+                                        {
+                                            Console.WriteLine("Inside an anonymous function:");
+                                            Console.WriteLine(message);
+                                        };
             smartClass.Divide(6, 0);
             Console.ReadLine();
         }
         private void WriteInConsole(string message)
         {
+            Console.WriteLine("Inside WriteInConsole method:");
             Console.WriteLine(message);
-        }
-
-        private void SendByEmail(string message)
-        {
-            //this could be sending the message by email
         }
     }
 }
