@@ -17,8 +17,8 @@ namespace IberodevFuncionalProgramming
         public void RunExampleDelegate()
         {
             SmartClass smartClass = new SmartClass();
-            smartClass.MethodAddress += message => Console.WriteLine($"Using lambda the result is \n{message}");
-            smartClass.Divide(6, 0);
+            smartClass.Divide(6, 0, message => 
+                Console.WriteLine($"Using lambda the result is \n{message}"));
             Console.ReadLine();
         }
     }
