@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{453374F4-75F3-4A51-A88A-BD83BD79369B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6DCCA6AF-12C4-45EF-9036-BE2CDC0FB3B1}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Iberodev.Functional.Delegate", "src\Iberodev.Functional.Delegate\Iberodev.Functional.Delegate.xproj", "{D541E85B-9A1B-4200-B0D9-9D39CEEAB530}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Iberodev.Functional.Lambda", "src\Iberodev.Functional.Lambda\Iberodev.Functional.Lambda.xproj", "{B9260649-FE07-404A-9297-49216C1843C2}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Iberodev.Functional.Action", "src\Iberodev.Functional.Actions\Iberodev.Functional.Action.xproj", "{2FAF7C0E-AC60-46A4-AA39-AB76280BC703}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Iberodev.Functional.Func", "src\Iberodev.Functional.Funcs\Iberodev.Functional.Func.xproj", "{F8A2E44D-A2B3-4C37-9A55-AA303DE56EA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D541E85B-9A1B-4200-B0D9-9D39CEEAB530}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D541E85B-9A1B-4200-B0D9-9D39CEEAB530}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D541E85B-9A1B-4200-B0D9-9D39CEEAB530}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D541E85B-9A1B-4200-B0D9-9D39CEEAB530}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9260649-FE07-404A-9297-49216C1843C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9260649-FE07-404A-9297-49216C1843C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9260649-FE07-404A-9297-49216C1843C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9260649-FE07-404A-9297-49216C1843C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FAF7C0E-AC60-46A4-AA39-AB76280BC703}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FAF7C0E-AC60-46A4-AA39-AB76280BC703}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FAF7C0E-AC60-46A4-AA39-AB76280BC703}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FAF7C0E-AC60-46A4-AA39-AB76280BC703}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8A2E44D-A2B3-4C37-9A55-AA303DE56EA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8A2E44D-A2B3-4C37-9A55-AA303DE56EA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8A2E44D-A2B3-4C37-9A55-AA303DE56EA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8A2E44D-A2B3-4C37-9A55-AA303DE56EA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D541E85B-9A1B-4200-B0D9-9D39CEEAB530} = {453374F4-75F3-4A51-A88A-BD83BD79369B}
+		{B9260649-FE07-404A-9297-49216C1843C2} = {453374F4-75F3-4A51-A88A-BD83BD79369B}
+		{2FAF7C0E-AC60-46A4-AA39-AB76280BC703} = {453374F4-75F3-4A51-A88A-BD83BD79369B}
+		{F8A2E44D-A2B3-4C37-9A55-AA303DE56EA6} = {453374F4-75F3-4A51-A88A-BD83BD79369B}
+	EndGlobalSection
+EndGlobal
