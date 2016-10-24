@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace IberodevFuncionalProgramming
+namespace Iberodev.Functional.Func
 {
     public class Program
     {
