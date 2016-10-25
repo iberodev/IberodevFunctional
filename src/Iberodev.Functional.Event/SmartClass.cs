@@ -1,11 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Iberodev.Functional.Event
 {
+    public delegate void PrimeFoundEventHandler(object sender, PrimeNumberEventArgs e);
+
+public class PrimeNumberEventArgs : EventArgs
+{
+    public int PrimeNumber { get; set; }
+}
+
     public class SmartClass
     {
-        public delegate void WritePrimeFound(int primeNumber);
+        public event PrimeFoundEventHandler OnPrimeFound;
 
         public bool IsPrimeNumber(int number)
         {
@@ -21,7 +27,7 @@ namespace Iberodev.Functional.Event
             return isPrime;
         }
 
-        public int GetTotalPrimeNumbers(int fromNumber, int toNumber, WritePrimeFound writePrimeFound)
+        public int GetTotalPrimeNumbers(int fromNumber, int toNumber)
         {
             int count = 0;
             for(int i = fromNumber; i <= toNumber; i++)
@@ -29,11 +35,9 @@ namespace Iberodev.Functional.Event
                 if (IsPrimeNumber(i))
                 {
                     count++;
-                    // notify if anybody subscribed
-                    if (writePrimeFound != null)
-                    {
-                        writePrimeFound.Invoke(i);
-                    }
+                    OnPrimeFound?.Invoke(this, new PrimeNumberEventArgs {
+                        PrimeNumber = i
+                    });
                 }
             }
             return count;

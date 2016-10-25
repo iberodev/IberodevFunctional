@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Iberodev.Functional.Event
 {
@@ -19,17 +16,15 @@ namespace Iberodev.Functional.Event
         public void RunEventSample()
         {
             SmartClass smartClass = new SmartClass();
-            //var totalPrimeNumbers = smartClass.GetTotalPrimeNumbers(1, 200, WritePrimeNumberFound);
-            var totalPrimeNumbers = smartClass.GetTotalPrimeNumbers(1, 200, primeNumber => {
-                Console.WriteLine($"Prime number found = {primeNumber}");
-            });
+            smartClass.OnPrimeFound += WritePrimeNumber;
+            var totalPrimeNumbers = smartClass.GetTotalPrimeNumbers(1, 20);
             Console.WriteLine($"Total Prime Numbers: {totalPrimeNumbers}");
             Console.ReadLine();
         }
 
-        //private void WritePrimeNumberFound(int primeNumber)
-        //{
-        //    Console.WriteLine($"Prime number found = {primeNumber}");
-        //}
+        private void WritePrimeNumber(object sender, PrimeNumberEventArgs e)
+        {
+            Console.WriteLine($"{sender} informs: Prime number found = {e.PrimeNumber}");
+        }
     }
 }
